@@ -29,21 +29,51 @@ class Program
         {
             Console.WriteLine("Tu es majeur");
         }
+
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
-        
+        Console.WriteLine("Combien d'euro as-tu ?");
+        int euro = Convert.ToInt32(Console.ReadLine());
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
+        Console.WriteLine("Tu veux acheter ma marchandise ?");
+
+        Console.WriteLine("1. pistolet des hendeks, c parfait pour les manifs, 50$");
+        Console.WriteLine("2. epee en diams, tah steve, 75$");
+        Console.WriteLine("3. master sword, on va buter ganon avec, 5000$ (trai trai cher)");
+        Console.WriteLine("4. carapace bleu, pour detruire des amities sur mario kart, 125$");
         
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
-        
+        Console.WriteLine("Choisis une arme (dis un chiffre entre 1 et 4 et casse pas les couilles)");
+        int armes = Convert.ToInt32(Console.ReadLine());
+
+        if (armes == 1)
+        {
+            Console.WriteLine("pistolet des hendeks");
+        }
+
+        if (armes == 2)
+        {
+            Console.WriteLine("epee en diams");
+        }
+
+        if (armes == 3)
+        {
+            Console.WriteLine("master sword");
+        }
+
+        if (armes == 4)
+        {
+            Console.WriteLine("carapace bleu");
+        }
+    }
+}
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
-        
+
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
-            // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
-            // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
-            
+        // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
+        // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
+
         /*
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
          */
-    }
-}
+ 
