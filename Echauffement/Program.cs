@@ -9,6 +9,7 @@ class Program
          */
         
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
+        Console.WriteLine("Nathan, Elden Ring")
         
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
         
