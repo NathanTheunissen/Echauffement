@@ -7,11 +7,16 @@ class Program
         /*
          * Consigne générale : faites un commit entre chaque étape !
          */
-        
+
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
-        Console.WriteLine("Nathan, Elden Ring")
-        
+        Console.WriteLine("Nathan, Elden Ring");
+
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
+        Console.WriteLine("Comment t'appelles-tu ?");
+        string prenom = Console.ReadLine();
+
+        Console.WriteLine("Quel âge as-tu ?");
+        int age = Convert.ToInt32(Console.ReadLine());
         
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
         
