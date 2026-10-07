@@ -63,7 +63,7 @@ class Program
         if (weaponChoice == 1)
         {
             float price = 50.0f;
-            if (money < price || age < 18)
+            if (money < price || isUnderage)
             {
                 Console.WriteLine("t pauvre, sale merde boooooooooo");
             }
@@ -76,7 +76,7 @@ class Program
         else if (weaponChoice == 2)
         {
             float price = 75.0f;
-            if (money < price || age < 18)
+            if (money < price || isUnderage)
             {
                 Console.WriteLine("t pauvre, sale merde boooooooooo");
             }
@@ -89,7 +89,7 @@ class Program
         else if (weaponChoice == 3)
         {
             float price = 5000.0f;
-            if (money < price || age < 18)
+            if (money < price || isUnderage)
             {
                 Console.WriteLine("t pauvre, sale merde boooooooooo");
             }
@@ -102,7 +102,7 @@ class Program
         else if (weaponChoice == 4)
         {
             float price = 125.0f;
-            if (money < price || age < 18)
+            if (money < price || isUnderage)
             {
                 Console.WriteLine("t pauvre, sale merde boooooooooo");
             }
