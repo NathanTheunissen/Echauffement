@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Data.SqlTypes;
+using System.Diagnostics;
 
 namespace Echauffement;
 
@@ -17,11 +18,22 @@ class Program
         Console.WriteLine("Comment t'appelles-tu ?");
         string prenom = Console.ReadLine();
 
+        if (prenom == "Xabab")
+        {
+            Console.WriteLine("C'est pas un jeu Mario c'est une licence");
+        }
+
+        if (prenom == "Gohan")
+        {
+            Console.WriteLine("Relation discrète, relation parfaite, vivons caché on aura moins de problèmes");
+        }
+
         Console.WriteLine("Quel âge as-tu ?");
         int age = Convert.ToInt32(Console.ReadLine());
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
-        if (age < 18)
+        bool isUnderage = age < 18;
+        if (isUnderage)
         {
             Console.WriteLine("Tu es mineur");
         }
@@ -32,7 +44,7 @@ class Program
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
         Console.WriteLine("Combien d'euro as-tu ?");
-        int euro = Convert.ToInt32(Console.ReadLine());
+        float money = Convert.ToSingle(Console.ReadLine());
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
         Console.WriteLine("Tu veux acheter ma marchandise ?");
@@ -41,34 +53,70 @@ class Program
         Console.WriteLine("2. epee en diams, tah steve, 75$");
         Console.WriteLine("3. master sword, on va buter ganon avec, 5000$ (trai trai cher)");
         Console.WriteLine("4. carapace bleu, pour detruire des amities sur mario kart, 125$");
-        
+
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
-        Console.WriteLine("Choisis une arme (dis un chiffre entre 1 et 4 et casse pas les couilles)");
+        Console.WriteLine("Choisis une arme (choisis une arme citées et casse pas les couilles)");
         int armes = Convert.ToInt32(Console.ReadLine());
 
-        if (armes == 1)
+        int weaponChoice = Convert.ToInt32(Console.ReadLine());
+        // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
+        if (weaponChoice == 1)
         {
-            Console.WriteLine("pistolet des hendeks");
+            float price = 50.0f;
+            if (money < price || age < 18)
+            {
+                Console.WriteLine("t pauvre, sale merde boooooooooo");
+            }
+            else
+            {
+                money = money - price;
+                Console.WriteLine("tiens pour toi bg");
+            }
         }
-
-        if (armes == 2)
+        else if (weaponChoice == 2)
         {
-            Console.WriteLine("epee en diams");
+            float price = 75.0f;
+            if (money < price || age < 18)
+            {
+                Console.WriteLine("t pauvre, sale merde boooooooooo");
+            }
+            else
+            {
+                money = money - price;
+                Console.WriteLine("tiens pour toi bg");
+            }
         }
-
-        if (armes == 3)
+        else if (weaponChoice == 3)
         {
-            Console.WriteLine("master sword");
+            float price = 5000.0f;
+            if (money < price || age < 18)
+            {
+                Console.WriteLine("t pauvre, sale merde boooooooooo");
+            }
+            else
+            {
+                money = money - price;
+                Console.WriteLine("tiens pour toi bg");
+            }
         }
-
-        if (armes == 4)
+        else if (weaponChoice == 4)
         {
-            Console.WriteLine("carapace bleu");
+            float price = 125.0f;
+            if (money < price || age < 18)
+            {
+                Console.WriteLine("t pauvre, sale merde boooooooooo");
+            }
+            else
+            {
+                money = money - price;
+                Console.WriteLine("tiens pour toi bg");
+            }
+        }
+        else
+        {
+            Console.WriteLine("gros t'essaye d'acheter quoi la ?");
         }
     }
-}
-        // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
-
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
         // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
         // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
@@ -76,4 +124,5 @@ class Program
         /*
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
          */
- 
+
+}
